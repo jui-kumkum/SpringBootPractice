@@ -16,4 +16,10 @@ public class EmployeeService {
         return employeeList;
     }
 
+    public Employee getAnEmployee(int id) {
+        return employeeList.stream().filter(e -> (
+                e.getEmployeeId() == id)).findFirst().get();
+
+    }
+
 }
